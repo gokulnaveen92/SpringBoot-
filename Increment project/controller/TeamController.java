@@ -36,4 +36,32 @@ public class TeamController {
         }
     }
 
+    @GetMapping("api/team")
+    public List<Team> getAllTeams(){
+        List<Team> list = service.getAllTeam();
+        if(!list.isEmpty()){
+            return list;
+        }else{
+            return null;
+        }
+    }
+
+    @GetMapping("api/team/{teamId}")
+    public Team getById(@PathVariable int teamId){
+        Team t3 = service.getByTeamId(teamId);
+        if(t3!=null){
+            return t3;
+        }else{
+            return null;
+        }
+    }
+
+    @DeleteMapping("api/team/{teamId}")
+    public boolean delete(@PathVariable int teamId ){
+        boolean b1 =service.deleltTeam(teamId);
+        return b1;
+        
+
+    }
+
 }
