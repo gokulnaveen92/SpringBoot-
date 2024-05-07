@@ -31,4 +31,26 @@ public class TeamServiceImpl implements TeamService {
         }
     }
 
+    @Override
+    public List<Team> getAllTeam() {
+        return repo.findAll();
+    }
+
+    @Override
+    public Team getByTeamId(int id) {
+        if(repo.existsById(id)){
+            return repo.findById(id).get();
+        }else{
+            return null;
+        }
+    }
+
+    @Override
+    public boolean deleltTeam(int id) {
+        repo.deleteById(id);
+        return true;
+        
+    }
+
+
 }
