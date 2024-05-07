@@ -1,4 +1,4 @@
-1))
+1))//person
 package com.examly.springapp.model;
 
 import jakarta.persistence.Entity;
@@ -14,23 +14,16 @@ public class Person {
     private String firstname;
     private String lastname;
     private int age;
-    
-    public Person(long id, String firstname, String lastname,int age) {
+
+    public Person(long id, String firstname, String lastname, int age) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.age = age;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public Person() {
+
     }
 
     public long getId() {
@@ -41,24 +34,32 @@ public class Person {
         this.id = id;
     }
 
-    public String getFirstName() {
+    public String getFirstname() {
         return firstname;
     }
 
-    public void setFirstName(String firstname) {
+    public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
 
-    public String getLastName() {
+    public String getLastname() {
         return lastname;
     }
 
-    public void setLastName(String lastname) {
+    public void setLastname(String lastname) {
         this.lastname = lastname;
     }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }  
+
     
 }
-
 
 2)
 package com.examly.springapp.repository;
