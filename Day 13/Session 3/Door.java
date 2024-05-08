@@ -187,7 +187,7 @@ public class DoorController {
         }
     }
     
-    @GetMapping("api/door/byColor/{color}")
+    @GetMapping("api/door/bycolor/{color}")
     public ResponseEntity<List<Door>> byColor(@PathVariable String color){
         List<Door> d2 = service.findByColor(color);
         if(d2!=null){
@@ -218,7 +218,7 @@ public class DoorController {
         }    
     }
     
-    @GetMapping("/api/door/bydoorType")
+    @GetMapping("/api/door/bydoortype")
     public ResponseEntity<List<Door>> byDoorType(@RequestParam String doorType){
         List<Door> list = service.byDoorTyp(doorType);
         if(list!=null){
