@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Player {
@@ -15,6 +17,11 @@ public class Player {
     private String category;
     private double biddingPrice;
     private boolean sold;
+
+    @ManyToOne
+    @JoinColumn(name = "team_id")
+    private Team team;
+    
     
     public Player() {
     }
@@ -74,6 +81,14 @@ public class Player {
 
     public void setSold(boolean sold) {
         this.sold = sold;
+    }
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
     }
     
 }
