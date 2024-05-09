@@ -2,9 +2,15 @@ package com.examly.springapp.entity;
 
 
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Team {
@@ -13,6 +19,14 @@ public class Team {
     private long id;
     private String name;
     private double maximumBudget;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "team", cascade = CascadeType.ALL)
+    private List<Player> players;
+    
+
+    public Team() {
+    }
 
     public Team(long id, String name, double maximumBudget) {
         this.id = id;
@@ -43,4 +57,18 @@ public class Team {
     public void setMaximumBudget(double maximumBudget) {
         this.maximumBudget = maximumBudget;
     }
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(List<Player> players) {
+        this.players = players;
+    }
+
+  
+
+    
+
+
 }
