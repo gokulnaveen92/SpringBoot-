@@ -1,0 +1,24 @@
+1)//index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+</head>
+<body>
+    <script>
+        function changeBackgroundColorInline(){
+            document.body.style.backgroundColor='rgb(173,216,230)';
+        }
+    </script>
+    <h1>Background Color Changer</h1>
+    <button id="inlineButton" onclick="changeBackgroundColorInline()">Inline JS</button>
+    <button id="referencedButton" onclick="changeBackgroundColorReferenced()">Referenced JS</button>
+</body>
+</html>
+
+2)//script.js
+function changeBackgroundColorReferenced(){
+    document.body.style.backgroundColor='rgb(240,128,128';
+}
