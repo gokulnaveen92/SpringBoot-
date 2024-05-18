@@ -18,6 +18,7 @@ function validateLogin(){
         return;
     }else if(upper && lower && dig && spl){
         result.innerHTML="Login successful.";
+        result.classList.remove("red");
         result.classList.add("green");
     }else{
         result.innerHTML="Invalid password.";
