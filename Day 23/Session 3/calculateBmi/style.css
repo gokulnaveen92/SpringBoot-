@@ -1,0 +1,81 @@
+        /* Center the container */
+        body {
+            background-color: lightblue;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+       .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Style labels */
+        label {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Center the input fields, h1, and button */
+        input {
+            width: 70%;
+            box-sizing: border-box;
+        }
+            h1,
+            button {
+                margin: auto;
+        }
+            
+        /* Style the button */
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        /* Style the result text */
+        #result {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        /* Style the weight status text */
+        #weightstatus {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        /* Color weight status based on BMI */
+        #weightstatus.green {
+            color: green;
+        }
+
+        #weightstatus.red {
+            color: red;
+        }
+
+        #invalidwt.red{
+            color: red;
+        }
+
+        #invalidht.red{
+            color: red;
+        }
