@@ -1,0 +1,76 @@
+body {
+    background-color:antiquewhite;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Horizontally center the container */
+    align-items: center; /* Vertically center the container */
+    height: 100vh; /* Set the body height to 100% of the viewport height */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color:azure;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+    width: 300px;
+}
+
+/* Style labels */
+label {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Center the input fields, h1, and button */
+input {
+    width: 80%;
+    height: 20px;
+    box-sizing:content-box;
+}
+    h1,
+    button {
+        margin: auto;
+}
+
+h1{
+    color:black;
+}
+    
+/* Style the button */
+button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Style the result text */
+#errorMessage {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#successMessage {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+textarea{
+    width: 80%;
+    height: 40px;
+    box-sizing:content-box;
+}
