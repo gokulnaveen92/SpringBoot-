@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+</head>
+<body>
+    <h1>User Registration Form</h1>
+    <div>
+        <label for="name">Name</label><span style="color: red;">*</span>
+        <input type="text" id="name"><br>
+
+        <label for="email">Email</label><span style="color: red;">*</span>
+        <input type="text" id="email"><br>
+
+        <label for="password">Password</label><span style="color: red;">*</span>
+        <input type="text" id="password"><br>
+
+        <label for="country">Country</label><span style="color: red;">*</span>
+        <select id="country">
+            <option value="none">Select a country</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+        </select><br>
+
+        <button id="submitButton" onclick="submitForm()">Submit</button><br>
+        <div>
+            <span id="errorMessage" style="color:red;"></span><br>
+            <span id="successMessage" style="color: green;"></span><br>
+        </div>
+    </div>  
+    <script src="script.js"></script>
+</body>
+</html>
+
+
