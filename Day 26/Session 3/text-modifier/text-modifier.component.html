@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <h1>Welcome to Text Modifier</h1>
+    <textarea type="text" placeholder="Enter text" [(ngModel)]="originalText"></textarea><br><br>
+    <button (click)="applyUppercase()" class="common-button">Convert to Uppercase</button>&nbsp;
+    <button (click)="applyLowercase()" class="common-button">Convert to Lowercase</button>&nbsp;
+    <button (click)="applyReverse()" class="common-button">Reverse Text</button>&nbsp;
+    <button (click)="clearText()" class="common-button">Clear Text</button><br>
+    <p>Modified Text:</p><br>
+    <span *ngIf="modifiedText">{{modifiedText}}</span>
+</body>
+</html>
