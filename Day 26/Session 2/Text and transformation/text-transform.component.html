@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+</head>
+<body style="margin: auto; text-align:center;">
+    <div>
+        <input type="text" (input)="transformText($event.target.value)">
+            <p>Transform Text: <span [innerText]="transformedText"></span></p>
+            <p>Length of Text: <span [innerText]="textLength"></span></p>
+            <p>Lowercase Count: <span [innerText]="lowercaseCount"></span></p>
+            <p>Uppercase Count: <span [innerText]="uppercaseCount"></span></p>
+            <p>Number Count: <span [innerText]="numberCount"></span></p>
+            <p>Special Character Count: <span [innerText]="specialCharCount"></span></p>
+    </div>
+</body>
+</html>
