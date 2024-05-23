@@ -1,0 +1,32 @@
+.Button{
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    width: auto;
+    height: auto;
+    padding: 20ox;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Horizontally center the container */
+    align-items: center; /* Vertically center the container */
+    height: 50vh; /* Set the body height to 100% of the viewport height */
+}
+
+.container{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:first baseline;
+    background-color:linen;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+    width: 300px; */
+}
