@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <div>
+        <input type="text" [(ngModel)]="newBookTitle">
+        <button (click)="addBook()">Add Book</button><br>
+        <ul>
+            <li *ngFor="let book of books;let i = index">
+                <span id="comButton">{{book.title}}</span>&nbsp;
+                <button (click)="completeBook(book)">Completed</button>&nbsp;
+                <button (click)="deleteBook(i)">Delete</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
