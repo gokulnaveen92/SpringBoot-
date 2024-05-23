@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item</title>
+</head>
+<body style="text-align: center;">
+    <div class="container">
+    <input type="text" [(ngModel)]="newItemName" placeholder="Enter item name">&nbsp;&nbsp;
+    <button (click)="addItem()" class="Button">Add Item</button><br><br>
+    <div *ngFor="let item of items">
+        <span>{{item.name}}</span>&nbsp;
+        <button class="Button" (click)="purchasedItem(item)">Purchased</button>&nbsp;&nbsp;
+        <button class="Button" (click)="deleteItem(i)">Delete</button>&nbsp;&nbsp;<br>
+    </div>
+</div>
+</body>
+</html>
