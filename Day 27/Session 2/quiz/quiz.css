@@ -1,0 +1,16 @@
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    border: 2px solid black;
+    margin: auto;
+    width: 50%;
+}
