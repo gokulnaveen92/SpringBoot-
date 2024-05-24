@@ -1,0 +1,19 @@
+<h1 style="text-align: center;">Welcome to the Quiz!</h1>
+<div class="container">
+<div *ngIf="currentQuestionIndex < quizQuestions.length">
+    <h3 style="text-align: left;">{{quizQuestions[currentQuestionIndex].question}}</h3>
+    <div *ngFor="let opt of quizQuestions[currentQuestionIndex].options;index as i">
+    <ul>
+        <li 
+            [ngClass]="{'green':showFeedBack && opt === quizQuestions[currentQuestionIndex].correctAnswer,'red':showFeedBack && opt !== quizQuestions[currentQuestionIndex].correctAnswer}" 
+            (click)="checkAnswer(i)">{{opt}}</li>
+    </ul>  
+    </div>
+    <span [ngClass]="{'green': feedback === 'Correct','red': feedback === 'Incorrect'}"  *ngIf="showFeedBack">{{feedback}}</span>
+</div>
+<div *ngIf="endQuiz()">
+    <p>Your Score: <span>{{score}}</span>/6</p>
+    <button style="background-color: dodgerblue; border: none;" (click)="restartQuiz()">Restart</button>
+</div>
+</div>
+
