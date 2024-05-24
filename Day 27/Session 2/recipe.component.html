@@ -4,13 +4,14 @@
    <span>{{recipe.ingredients}}</span><br><br>
    <button (click)="showDetails(recipe)">View Details</button>
 </div><br>
-<div class="selected" *ngIf="selectedRecpie">
+<div class="selected" *ngIf="selectedRecipe">
     <h1>Recpie Details</h1>
-        <h3>{{selectedRecpie.name}}</h3>
-        <p>Type: <span>{{selectedRecpie.type}}</span></p><br>
-        <p>Ingredient: <span>{{selectedRecpie.ingredients}}</span></p><br>
-        <p>Instruction: <span>{{selectedRecpie.instructions}}</span></p><br>
+        <h3>{{selectedRecipe.name}}</h3>
+        <span>Type: <span>{{selectedRecipe.type}}</span></span><br>
+        <span>Ingredients: <span>{{selectedRecipe.ingredients}}</span></span><br>
+        <span>Instructions: <span>{{selectedRecipe.instructions}}</span></span><br>
         <button style="color: white;background-color: dodgerblue;border: none;border-radius: 5px;" (click)="hideDetails()">Hide Details</button>&nbsp;
         <button style="color: white;background-color:red;border: none;border-radius: 5px;" (click)="deleteRecipe(selectedRecpie)">Delete</button>&nbsp;
 </div>
+
 
