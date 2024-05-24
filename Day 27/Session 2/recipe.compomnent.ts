@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Recipe } from '../recipe.model';
+import { Recipe } from '../model/recipe.model';
 
 @Component({
   selector: 'app-recipe-list',
@@ -23,7 +23,7 @@ export class RecipeListComponent implements OnInit {
       instructions : "Just eat its none of your business"
     }
   ];
-  selectedRecpie:Recipe=null;
+  selectedRecipe:Recipe=null;
 
 
 
@@ -33,11 +33,11 @@ export class RecipeListComponent implements OnInit {
   }
 
   showDetails(recipe:Recipe){
-    this.selectedRecpie=recipe;
+    this.selectedRecipe=recipe;
   }
 
   hideDetails(){
-    this.selectedRecpie=null;
+    this.selectedRecipe=null;
   }
 
   deleteRecipe(recipe:Recipe){
