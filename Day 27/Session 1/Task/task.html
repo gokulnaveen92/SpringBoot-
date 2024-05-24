@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do</title>
+</head>
+<body>
+    <div>
+    <h1>To-Do List</h1>
+    <input type="text" [(ngModel)]="newTask" placeholder="Add a new Task">&nbsp;&nbsp;
+    <button (click)="addTask()" class="bt" >Add</button><br><br><br> 
+    </div>
+
+    <div class="listContainer">
+    <ul>
+        <li class="container" *ngFor="let task of tasks">
+            <span [ngClass]="{'completed': task.completed}">{{task.title}}</span>&nbsp;&nbsp;
+            <button *ngIf="!task.completed" class="bt" (click)="completeTask(task)">Complete</button>&nbsp;&nbsp;
+            <button class="bt" (click)="deleteTask(i)">Delete</button><br><br>
+        </li>
+    </ul>
+</div>
+    
+</body>
+</html>
