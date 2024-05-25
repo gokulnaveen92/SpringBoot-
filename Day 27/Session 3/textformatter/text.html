@@ -1,0 +1,12 @@
+
+<div>
+    <input type="text" [(ngModel)]="inputText" placeholder="Enter Text"><br><br>
+    <button class="bt" (click)="formatText('uppercase')">Uppercase</button><br><br>
+    <button class="bt" (click)="formatText('lowercase')">Lowercase</button><br><br>
+    <button class="bt" (click)="formatText('capitalize')">Capitalize</button><br><br>
+    <button class="bt" (click)="formatText('reverse')">Reverse</button><br><br>
+    <button class="bt" (click)="formatText('empty')">None</button><br><br><br>
+</div>
+<div>
+    <span>Text :{{inputText | textFormatter:selectedFormat:' '}}</span>
+</div>
