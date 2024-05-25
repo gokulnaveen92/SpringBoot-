@@ -1,0 +1,6 @@
+
+<h1>Pick a color</h1>
+<input type="color" [(ngModel)]="selectedColor" (input)="onColorChange()">
+<h1>Selected Color:</h1>
+<div class="selected-color-box" [style.background-color]="selectedColor">
+</div>
