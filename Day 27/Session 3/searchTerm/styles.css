@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+input{
+    height: 7vh;
+    width: 400px;
+    align-self: center;
+}
+body{
+    text-align: left;
+}
+li{
+    border: 2px solid whitesmoke;
+    background-color:lightgrey;
+    padding: 10px;
+    display: block;
+    text-align: start;
+    width: 20%;
+    padding: 20px;
+    margin-bottom: 10px;
+
+}
+
+ul{
+    list-style: none;
+    text-align: center;
+}
