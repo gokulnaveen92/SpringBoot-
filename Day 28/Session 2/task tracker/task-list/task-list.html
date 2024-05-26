@@ -1,0 +1,9 @@
+<div class="task-list">
+    <h1>Task List</h1>
+    <ul>
+        <li  class="list" *ngFor="let t of tasks; index as i">
+            <span>{{t}}</span>&nbsp;&nbsp;&nbsp;<button (click)="deleteTask(i)">Delete</button><br><br>
+        </li>
+    </ul>
+
+</div>
