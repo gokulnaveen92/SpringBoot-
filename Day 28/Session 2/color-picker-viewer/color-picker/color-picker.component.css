@@ -1,0 +1,11 @@
+.selected-color-box{
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 7px;
+}
+input{
+    height: 50px;
+    border: none;
+    border-radius: 7px;
+}
