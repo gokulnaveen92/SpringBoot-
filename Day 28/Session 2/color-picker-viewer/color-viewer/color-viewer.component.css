@@ -1,0 +1,9 @@
+.color-box{
+    width: 200px;
+    height: 200px;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    text-align: start;
+    font-size: 130%;
+}
