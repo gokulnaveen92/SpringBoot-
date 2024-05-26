@@ -1,0 +1,3 @@
+<h1>Task Tracker</h1>
+<app-task-input (taskAdded)="addTask($event)"></app-task-input>
+<app-task-list (taskDeleted)="deleteTask($event)" [tasks]="tasks"></app-task-list>
