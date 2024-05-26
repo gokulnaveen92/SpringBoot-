@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+}
+
+app-task-input,app-task-list{
+    border: none;
+    background-color:white;
+    display: flex;
+    margin-bottom: 1vh;
+    margin-left: 320px;
+    padding: 20px;
+    width: 50%;
+    max-height: max-content;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px gray;
+}
