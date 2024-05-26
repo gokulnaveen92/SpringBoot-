@@ -1,0 +1,6 @@
+<h1>Product List</h1>
+<div class="product-item" *ngFor="let p of products">
+    <img [src]="p.imageUrl"><br>
+    <h3>{{p.name}}</h3>
+    <button (click)="viewDetails(p)">View Details</button><br><br>
+</div>
