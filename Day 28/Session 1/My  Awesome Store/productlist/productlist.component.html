@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Product List</h1>
+</div>
+<div class="list">
+    <ul>
+        <li class="product-item" *ngFor="let p of products">
+            <h2>{{p.name}}</h2>
+            <p>{{p.description}}</p>
+            <button (click)="goToDetails(p)">View Details</button>
+        </li>
+    </ul>
+</div>
