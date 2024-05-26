@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+}
+.container{
+    display: flex;
+    text-align: center;
+}
+app-product-list,app-product-details{
+    flex: 1;
+    margin-right: 50px;
+}
