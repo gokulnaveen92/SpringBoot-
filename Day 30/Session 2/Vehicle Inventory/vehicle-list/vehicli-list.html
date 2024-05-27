@@ -1,0 +1,17 @@
+
+
+<h2>Vehicle List</h2>
+<div *ngIf="vehicles.length>0">
+    <ul *ngFor="let vh of vehicles;index as i">
+        <li>{{vh.name}}-{{vh.type}}-{{vh.brand}}</li>&nbsp;
+        <button (click)="deleteVehicle(i)">Delete</button>
+    </ul>
+</div>
+<div *ngIf="vehicles.length===0">
+    <p>No vehicle is added.</p>
+</div>
+
+
+
+
+
