@@ -1,0 +1,62 @@
+<h1>Job Registration Form</h1>
+<div class="container">
+<form (ngSubmit)="onSubmit(myform)" #myform="ngForm">
+    <label for="name" class="form-label">Name:</label><br>
+    <input type="text" name="name" required ngModel><br><br>
+
+    <label for="age" class="form-label" >Age:</label><br> 
+    <input type="text" name="age"  required ngModel ><br><br>
+
+    <label for="gender" class="form-label">Gender:</label><br> 
+    <select name="gender" id="gender"  required ngModel >
+        <option [value]="opt" *ngFor="let opt of genders">{{opt}}</option>
+    </select><br><br>
+
+    <label for="email" class="form-label">Email:</label><br> 
+    <input type="text" name="email"  required ngModel><br><br>
+
+    <label for="phone" class="form-label">Phone:</label><br> 
+    <input type="text" name="phone"  required ngModel ><br><br>
+
+    <label for="jobPosition" class="form-label">Job Position:</label><br>
+    <select name="jobPosition" id="jobPosition" required ngModel >
+        <option [value]="job" *ngFor="let job of jobPositions">{{job}}</option>
+    </select><br><br>
+
+    <label for="experience" class="form-label">Experience (in years):</label><br>
+    <select name="experience" id="experience" required ngModel >
+        <option [value]="exp" *ngFor="let exp of years">{{exp}}</option>
+    </select><br><br>
+    
+    <label for="skills" class="form-label">Skills:</label><br>
+    <input type="text" name="skills" required ngModel ><br><br>
+
+    <label for="education" class="form-label">Education:</label><br>
+    <input type="text" name="education" required ngModel ><br><br>
+
+    <label for="comments" class="form-label">Comments:</label><br>
+    <textarea name="comments" id="comments" cols="30" rows="3" required ngModel></textarea><br><br><br>
+
+
+    <button class="bt" type="submit">Submit</button>
+</form>
+</div>
+
+
+
+<div *ngIf="submitted" class="modal-overlay" >
+    <div class="modal-content">
+        <h1>Job Application Submitted</h1>
+        <button class="clsBt" (click)="closeModal()">x</button>
+        <p>Name: {{formData.value.name}}</p>
+        <p>Age: {{formData.value.age}}</p>
+        <p>Gender: {{formData.value.gender}}</p>
+        <p>Email: {{formData.value.email}}</p>
+        <p>Phone: {{formData.value.phone}}</p>
+        <p>Job: {{formData.value.jobPosition}}</p>
+        <p>Experience: {{formData.value.experience}}</p> 
+        <p>Skills: {{formData.value.skills}}</p>
+        <p>Education: {{formData.value.education}}</p>
+        <p>Comments: {{formData.value.comments}}</p>
+    </div>
+</div>
