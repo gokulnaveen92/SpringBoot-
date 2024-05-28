@@ -19,18 +19,18 @@ export class RegistrationFormComponent implements OnInit {
 
   onSubmit(form:NgForm){
     //console.log(form);
-    console.log(this.passwordMismatch)
-    if(!form.value.passwordMismatch===form.value.conformMismatch){
+    //console.log(this.passwordMismatch)
+    if(form.value.password !== form.value.confirmPassword){
       this.passwordMismatch=true;
-      console.log(this.passwordMismatch)
-      return;
     }else{
       if(form.valid){
-        this.passwordMismatch=false;
-        //console.log(this.passwordMismatch)
-          this.isSubmitted=true;
-          //form.reset();
-        }
+        this.isSubmitted = true;
+        this.passwordMismatch = false;
+        form.reset();
       }
+    }
+
+    
+
   }
 }
