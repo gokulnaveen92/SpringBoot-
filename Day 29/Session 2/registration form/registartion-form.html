@@ -1,0 +1,33 @@
+<h1>Registration Form</h1>
+<form (ngSubmit)="onSubmit(registrationForm)" #registrationForm="ngForm">
+    <label for="name">Name</label>
+    <input type="text" id="name" #name="ngModel" required ngModel name="name">
+    <div class="error-message">
+        <span  *ngIf="name.invalid">*Name is required</span>
+    </div>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" required ngModel email #email="ngModel"  name="email">
+    <div class="error-message" >
+        <span *ngIf="email.errors?.invalid">*Email is required</span>
+        <span *ngIf="email.errors?.email">*Invalid email format!</span>
+    </div>
+
+    <label for="password">Password</label>
+    <input type="text" id="password" #password="ngModel" required ngModel  name="password">
+    <div class="error-message">
+        <span *ngIf="password.invalid">*Password is required</span>
+    </div>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="text" id="confirmPassword" #confirmPassword="ngModel" required ngModel  name="confirmPassword">
+    <div class="error-message" >
+        <span *ngIf="confirmPassword.invalid">*Confirm Password is required</span>
+        <span *ngIf="passwordMismatch">*Password do not match</span>
+    </div>
+
+    <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+
+</form>
+
+<div *ngIf="isSubmitted" class="success-message">Registration successful</div>
