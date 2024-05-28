@@ -1,0 +1,68 @@
+
+<h2>User Registration</h2>
+<form (ngSubmit)="onSubmit(registrationForm)" #registrationForm="ngForm" >
+    <div class="form-group">
+        <label for="firstName">Enter the First Name:</label>
+        <input type="text" id="firstName" name="firstName" #firstName="ngModel" ngModel 
+        required minlength="6">
+        <div class="error-message">
+            <span *ngIf="firstName.errors?.required">First Name is required.</span>
+            <span *ngIf="firstName.errors?.minlength">Need at least 6 characters.</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Enter the Last Name:</label>
+        <input type="text" id="lastName" name="lastName" #lastName="ngModel" ngModel 
+        required minlength="6">
+        <div class="error-message">
+            <span *ngIf="lastName.errors?.required">Last Name is required.</span>
+            <span *ngIf="lastName.errors?.minlength">Need at least 6 characters.</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="mobileNumber">Enter the Mobile Number:</label>
+        <input type="text" id="mobileNumber" name="lastName" #mobileNumber="ngModel"  ngModel 
+        required minlength="10" pattern="[0-9]{10}">
+        <div class="error-message">
+            <span *ngIf="mobileNumber.errors?.required || mobileNumber.errors?.pattern || mobileNumber.errors?.minlength">Mobile Number is required and should be 10 digits.</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Enter the Email:</label>
+        <input type="text" id="email" name="email" #email="ngModel"  ngModel 
+        required email>
+        <div class="error-message">
+            <span *ngIf="email.errors?.required || email.errors?.email">Email is required and must be a valid email address.</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Enter the Password:</label>
+        <input type="password" id="password" name="password" #password="ngModel" ngModel 
+        required pattern="(?=.*[0-9])(?=.*[!@#$%^&*])([a-z][A-Z])"
+        minlength="8" >
+        <div class="error-message">
+            <span *ngIf="password.errors?.required">Password is required.</span>
+            <span *ngIf="password.errors?.minlength">Need at least 8 characters.</span>
+            <span *ngIf="password.errors?.pattern">Password must contain at least 1 numerical character and 1 special character.</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" #confirmPassword="ngModel"  ngModel 
+        required [ngClass]="{'Invalid-match': password.value !== confirmPassword.value}">
+        <div class="error-message">
+            <span *ngIf="confirmPassword.errors?.required">Confirm Password is required.</span>
+            <span *ngIf="confirmPassword !== password">Passwords do not match</span>
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="registrationForm.invalid || password.value !== confirmPassword.value">Submit</button><br>
+</form>
+
+<button (click)="resetForm(registrationForm)">Reset</button>
+<div class="success-message" *ngIf="isFormSubmitted">Form submitted successfully!</div>
